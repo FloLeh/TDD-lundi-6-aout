@@ -1,5 +1,6 @@
 <div class="center jumbotron">
   <h1>Bienvenue dans le Club ! Vous êtes déjà <%= User.all.count %></h1>
+  <h2>Et vous adorez les tests !</h2>
     <% User.all.each do |u| %>
       <hr>
       <p><%= u.first_name %> <%= u.last_name %></p>

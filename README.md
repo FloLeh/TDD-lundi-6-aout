@@ -1,24 +1,5 @@
-# README
+# Nous, chez THP Nantes, les tests c'est vraiment notre passion
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## C'est pourquoi on vous propose aujourd'hui :
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Une production en ligne de ces merveilleux tests](https://thp-nantes-tdd.herokuapp.com/)

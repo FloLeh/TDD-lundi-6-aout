@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   def update
     @post = User.find(params[:id])
-    @post.update!(first_name: params[:user][:first_name],last_name: params[:user][:last_name], email: params[:user][:email], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation])
+    @post.update!(first_name: params[:user][:first_name],last_name: params[:user][:last_name], email: params[:user][:email])
     if @post.update_attributes(user_params)
       redirect_to @post , success: "Profil modifié"
     else

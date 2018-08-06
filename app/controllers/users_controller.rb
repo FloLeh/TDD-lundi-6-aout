@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     @post = User.find(params[:id])
     @post.update!(first_name: params[:user][:first_name],last_name: params[:user][:last_name], email: params[:user][:email], password: params[:user][:password], password_confirmation: params[:user][:password_confirmation])
     if @post.update_attributes(user_params)
-      redirect_to root_url , success: "Profil modifié"
+      redirect_to @post , success: "Profil modifié"
     else
       redirect_to edit_user_path, danger: "Vous ne pouvez pas changer comme cela"
     end

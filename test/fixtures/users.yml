@@ -3,4 +3,4 @@ michael:
   first_name: michael
   last_name: Example
   email: michael@example.com
-  password_digest: foobar
+  password_digest: <%= User.digest('password') %>

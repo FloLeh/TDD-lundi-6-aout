@@ -1,2 +1,25 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<center>
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-normal">Modifier votre profil</h1>
+  </div>
+  <%= form_for @post,url: {action: "update"}, html: {class: "form-signin w-25"} do |f| %>
+    Prénom :
+    <%= f.text_field :first_name, class: "form-control", value: @post.first_name %>
+    <br /> <br />
+    Nom :
+    <%= f.text_field :last_name, class: "form-control", value: @post.last_name %>
+    <br /> <br />
+    Email :
+    <%= f.email_field :email, class: "form-control", value: @post.email %>
+    <br /> <br />
+    Mot de passe :
+    <%= f.password_field :password, class: "form-control" %>
+    <small>Min. 6 caractères</small>
+    <br /> <br />
+    Confirmer le mot de passe :
+    <%= f.password_field :password_confirmation, class: "form-control"%>
+    <br /> <br />
+    <%= f.submit "Modifier", class: "btn btn-lg btn-primary btn-block" %>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <% end %>
+</center>

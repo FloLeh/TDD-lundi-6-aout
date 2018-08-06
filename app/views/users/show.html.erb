@@ -1,0 +1,6 @@
+<div class="center jumbotron">
+  <h1>Voici ta page <%= current_user.first_name %> <%= current_user.last_name %> !</h1>
+  <p>Ton adresse mail : <%= current_user.email %></p>
+  <a href= <%= edit_user_path %> ><button class="btn btn-success">Modifier</button></a>
+  <%= link_to "Supprimer", @post, method: :delete, data: { confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger" %>
+</div>

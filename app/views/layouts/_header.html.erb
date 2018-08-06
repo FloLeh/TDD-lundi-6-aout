@@ -1,0 +1,27 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href=<%= root_url %>>Accueil</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <% if logged_in? %>
+            <a class="nav-link" href=<%= club_path %> >Club</a>
+          <% end %>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <% if logged_in? %>
+          <li class="nav-item" ><%= link_to "Profil", current_user,class: "nav-link" %></li>
+          <li class="nav-item pl-3"><%= link_to "Se déconnecter", logout_path, method: :delete, class: "btn btn-danger"  %>
+        <% else %>
+          <li class="nav-item"><%= link_to "Se connecter", login_path, class: "btn btn-primary" %></li>
+          <li class="nav-item pl-3"><%= link_to "S'inscrire", new_user_path, class: "btn btn-success" %></li>
+        <% end %>
+      </ul>
+
+    </div>
+  </nav>
+</header>

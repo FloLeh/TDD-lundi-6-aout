@@ -1,0 +1,15 @@
+<h1 class="text-center">Connectez-vous</h1>
+<br>
+<center>
+  <%= form_for :session, url: login_path, html: {class: "form-signin w-25"} do |f| %>
+    Email :
+    <%= f.email_field :email, class: "form-control", placeholder: "youremail@domain.com", autofocus: true %>
+    <br /> <br />
+    Password :
+    <%= f.password_field :password, class: "form-control", placeholder: "yourpassword" %>
+    <br /> <br />
+    <%= f.submit "Se connecter", class: "btn btn-lg btn-primary btn-block" %>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <% end %>
+  Pas encore de compte ? <%= link_to "S'inscrire", new_user_path%>
+</center>
